@@ -1,9 +1,9 @@
 {
     // Comments are accepted in the manifest, even though it is JSON.
     "manifest_version": 3,
-    "name": "Chrome Extension v3 Starter",
-    "description": "A minimal example of a chrome extension using manifest v3",
-    "version": "0.0.1",
+    "name": "Improve 209",
+    "description": "Some changes to the csc209 (2023 winter) website coordinated by Professor Rosenbloom",
+    "version": "0.12.0",
     "icons": {
         "16": "logo/logo-16.png",
         "48": "logo/logo-48.png",
@@ -14,15 +14,15 @@
         "default_title": "Chrome Addon v3 Starter",
         "default_popup": "popup/popup.html"
     },
-    "permissions": [],
+    "permissions": [
+        "scripting"
+    ],
     "host_permissions": [
         "*://*/*"
     ],
-    "background": {
-        "service_worker": "service-worker.js"
-    },
     "content_scripts": [{
-        "js": ["foreground.js"],
-        "matches": ["https://github.com/*"]
+        "matches": ["https://mcs.utm.utoronto.ca/~209/23s/*"],
+        "css": ["foreground.css"],
+        "js": ["foreground.js"]
     }]
 }

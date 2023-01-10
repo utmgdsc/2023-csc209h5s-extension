@@ -1,0 +1,225 @@
+/* improve main nav usability per fitt's law */
+nav ul li {
+	padding: unset !important;
+}
+
+nav ul li a {
+	display: block !important;
+	padding: 10px 0 !important;
+	transition: color .3s !important;
+}
+
+/* add open in new tab indicator */
+[target="_blank"]::after {
+	background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M256 64C256 46.33 270.3 32 288 32H415.1C415.1 32 415.1 32 415.1 32C420.3 32 424.5 32.86 428.2 34.43C431.1 35.98 435.5 38.27 438.6 41.3C438.6 41.35 438.6 41.4 438.7 41.44C444.9 47.66 447.1 55.78 448 63.9C448 63.94 448 63.97 448 64V192C448 209.7 433.7 224 416 224C398.3 224 384 209.7 384 192V141.3L214.6 310.6C202.1 323.1 181.9 323.1 169.4 310.6C156.9 298.1 156.9 277.9 169.4 265.4L338.7 96H288C270.3 96 256 81.67 256 64V64zM0 128C0 92.65 28.65 64 64 64H160C177.7 64 192 78.33 192 96C192 113.7 177.7 128 160 128H64V416H352V320C352 302.3 366.3 288 384 288C401.7 288 416 302.3 416 320V416C416 451.3 387.3 480 352 480H64C28.65 480 0 451.3 0 416V128z'/%3E%3C/svg%3E") no-repeat !important;
+	content: " " !important;
+	display: inline-block !important;
+	filter: invert(47%) sepia(18%) saturate(897%) hue-rotate(165deg) brightness(92%) contrast(87%) !important;
+	height: .7em !important;
+	width: .7em !important;
+	margin-left: .3em !important;
+	opacity: .5 !important;
+}
+
+[target="_blank"]:hover::after {
+	filter: invert(75%) sepia(0%) saturate(1%) hue-rotate(156deg) brightness(93%) contrast(84%) !important;
+}
+
+/* reduce margin of notes */
+td ul {
+	margin: 0.5em !important;
+}
+
+td li {
+	margin-left: -1em !important;
+}
+
+/* syntax highlighting */
+.highlight-comma,
+.highlight-colon,
+.highlight-keyword,
+.highlight-operator,
+.highlight-function,
+.highlight-function-name {
+	font-weight: 400 !important;
+}
+
+.highlight-argument {
+	font-style: italic !important;
+}
+
+.highlight-default,
+.highlight-colon,
+.highlight-semicolon,
+.highlight-comma {
+	color: #333333 !important;
+}
+
+.highlight-keyword,
+.highlight-operator {
+	color: #a71d5d !important;
+}
+
+.highlight-function {
+	color: #a71d5d !important;
+}
+
+.highlight-function-name {
+	color: #795da3 !important;
+}
+
+.highlight-argument {
+	color: #FFBC61
+}
+
+.highlight-string {
+	color: #183691 !important;
+}
+
+.highlight-number {
+	color: #0086b3 !important;
+}
+
+.highlight-comment {
+	color: #969896 !important;
+}
+
+.highlight-left-parentheses,
+.highlight-right-parentheses,
+.highlight-left-bracket,
+.highlight-right-bracket {
+	color: #333333 !important;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+	html,
+	body,
+	table {
+		background: #212121 !important;
+		color: #e2e2e2 !important;
+	}
+
+	h2 {
+		color: #2980b9 !important;
+	}
+
+	::selection {
+		background: #2494B9 !important;
+		color: white !important;
+	}
+
+	a:link {
+		color: #4CB9E2 !important;
+	}
+
+	nav a:link {
+		color: #4CB9E2 !important;
+	}
+
+	a:visited {
+		color: #4CB9E2 !important;
+	}
+
+	a:hover {
+		color: white !important;
+	}
+
+	nav a:hover {
+		color: white !important;
+	}
+
+	table {
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+		color: #e2e2e2 !important;
+	}
+
+	td {
+		border-left: solid 1px #121212 !important;
+	}
+
+		td strong {
+			color: #2980b9 !important;
+		}
+
+	th {
+		background: #2980b9 !important;
+		color: white !important;
+	}
+
+	tbody tr:nth-child(odd) {
+		background-color: #212121 !important;
+	}
+
+	tbody tr:nth-child(even) {
+		background-color: #262626 !important;
+	}
+
+	div.title a:hover {
+		color: rgba(69, 131, 163, 0.8) !important;
+	}
+
+	.footer {
+		border-top: solid 3px #212121 !important;
+	}
+
+	nav {
+		background: #212121 !important;
+	}
+
+	/* highlight */
+	.highlight-argument {
+		font-style: italic !important;
+	}
+
+	.highlight-default,
+	.highlight-colon,
+	.highlight-semicolon,
+	.highlight-comma {
+		color: #ddd !important;
+	}
+
+	.highlight-keyword,
+	.highlight-operator {
+		color: #ff6192 !important;
+	}
+
+	.highlight-function {
+		color: #47A3FF !important;
+	}
+
+	.highlight-function-name {
+		color: #61FFD3 !important;
+	}
+
+	.highlight-argument {
+		color: #FFBC61
+	}
+
+	.highlight-string {
+		color: #9AFF76 !important;
+	}
+
+	.highlight-number {
+		color: #C049FE !important;
+	}
+
+	.highlight-comment {
+		color: #777 !important;
+	}
+
+	.highlight-left-parentheses,
+	.highlight-right-parentheses,
+	.highlight-left-bracket,
+	.highlight-right-bracket {
+		color: #82C0FF !important;
+	}
+
+	[target="_blank"]:hover::after {
+		filter: invert(47%) brightness(999%) !important;
+	}
+
+	* {
+		color-scheme: dark !important;
+	}
+}
