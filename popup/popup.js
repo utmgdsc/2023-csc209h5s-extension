@@ -24,6 +24,8 @@ async function getLectures(lectureNumber) {
             document.getElementById('lectures').appendChild(e);
             e.style.visibility = "visible";
             getLectures(lectureNumber + 1);
+        } else {
+            e.remove();
         }
     });
 }
