@@ -1,3 +1,16 @@
+/*
+ * variables
+ */
+:root {
+	--color-primary: #2980b9;
+	--color-secondary: #4CB9E2;
+	--color-tertiary: #2494B9;
+	--text-color: #ffffff;
+	--text-color-secondary: #e2e2e2;
+	--background-color: #212121;
+	--background-color-secondary: #262626;
+}
+
 /* improve main nav usability per fitt's law */
 nav ul li {
 	padding: unset !important;
@@ -34,125 +47,69 @@ td li {
 	margin-left: -1em !important;
 }
 
-/* syntax highlighting */
-.highlight-comma,
-.highlight-colon,
-.highlight-keyword,
-.highlight-operator,
-.highlight-function,
-.highlight-function-name {
-	font-weight: 400 !important;
-}
-
-.highlight-argument {
-	font-style: italic !important;
-}
-
-.highlight-default,
-.highlight-colon,
-.highlight-semicolon,
-.highlight-comma {
-	color: #333333 !important;
-}
-
-.highlight-keyword,
-.highlight-operator {
-	color: #a71d5d !important;
-}
-
-.highlight-function {
-	color: #a71d5d !important;
-}
-
-.highlight-function-name {
-	color: #795da3 !important;
-}
-
-.highlight-argument {
-	color: #FFBC61
-}
-
-.highlight-string {
-	color: #183691 !important;
-}
-
-.highlight-number {
-	color: #0086b3 !important;
-}
-
-.highlight-comment {
-	color: #969896 !important;
-}
-
-.highlight-left-parentheses,
-.highlight-right-parentheses,
-.highlight-left-bracket,
-.highlight-right-bracket {
-	color: #333333 !important;
-}
-
 /* dark mode */
 @media (prefers-color-scheme: dark) {
+
 	html,
 	body,
 	table {
-		background: #212121 !important;
-		color: #e2e2e2 !important;
+		background: var(--background-color) !important;
+		color: var(--text-color-secondary) !important;
 	}
 
 	h2 {
-		color: #2980b9 !important;
+		color: var(--color-primary) !important;
 	}
 
 	::selection {
-		background: #2494B9 !important;
-		color: white !important;
+		background: var(--color-tertiary) !important;
+		color: var(--text-color) !important;
 	}
 
 	a:link {
-		color: #4CB9E2 !important;
+		color: var(--color-secondary) !important;
 	}
 
 	nav a:link {
-		color: #4CB9E2 !important;
+		color: var(--color-secondary) !important;
 	}
 
 	a:visited {
-		color: #4CB9E2 !important;
+		color: var(--color-secondary) !important;
 	}
 
 	a:hover {
-		color: white !important;
+		color: var(--text-color) !important;
 	}
 
 	nav a:hover {
-		color: white !important;
+		color: var(--text-color) !important;
 	}
 
 	table {
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
-		color: #e2e2e2 !important;
+		color: var(--text-color-secondary) !important;
 	}
 
 	td {
-		border-left: solid 1px #121212 !important;
+		border-left: solid 1px var(--background-color-secondary) !important;
 	}
 
-		td strong {
-			color: #2980b9 !important;
-		}
+	td strong {
+		color: var(--color-primary) !important;
+	}
 
 	th {
-		background: #2980b9 !important;
-		color: white !important;
+		background: var(--color-primary) !important;
+		color: var(--text-color) !important;
 	}
 
 	tbody tr:nth-child(odd) {
-		background-color: #212121 !important;
+		background-color: var(--background-color) !important;
 	}
 
 	tbody tr:nth-child(even) {
-		background-color: #262626 !important;
+		background-color: var(--background-color-secondary) !important;
 	}
 
 	div.title a:hover {
@@ -160,59 +117,11 @@ td li {
 	}
 
 	.footer {
-		border-top: solid 3px #212121 !important;
+		border-top: solid 3px var(--background-color) !important;
 	}
 
 	nav {
-		background: #212121 !important;
-	}
-
-	/* highlight */
-	.highlight-argument {
-		font-style: italic !important;
-	}
-
-	.highlight-default,
-	.highlight-colon,
-	.highlight-semicolon,
-	.highlight-comma {
-		color: #ddd !important;
-	}
-
-	.highlight-keyword,
-	.highlight-operator {
-		color: #ff6192 !important;
-	}
-
-	.highlight-function {
-		color: #47A3FF !important;
-	}
-
-	.highlight-function-name {
-		color: #61FFD3 !important;
-	}
-
-	.highlight-argument {
-		color: #FFBC61
-	}
-
-	.highlight-string {
-		color: #9AFF76 !important;
-	}
-
-	.highlight-number {
-		color: #C049FE !important;
-	}
-
-	.highlight-comment {
-		color: #777 !important;
-	}
-
-	.highlight-left-parentheses,
-	.highlight-right-parentheses,
-	.highlight-left-bracket,
-	.highlight-right-bracket {
-		color: #82C0FF !important;
+		background: var(--background-color) !important;
 	}
 
 	[target="_blank"]:hover::after {

@@ -1,5 +1,4 @@
 {
-    // Comments are accepted in the manifest, even though it is JSON.
     "manifest_version": 3,
     "name": "Improve 209",
     "description": "Some changes to the csc209 (2023 winter) website coordinated by Professor Rosenbloom",
@@ -11,7 +10,7 @@
     },
     "options_page": "settings/settings.html",
     "action": {
-        "default_title": "Chrome Addon v3 Starter",
+        "default_title": "Improve 209",
         "default_popup": "popup/popup.html"
     },
     "permissions": [

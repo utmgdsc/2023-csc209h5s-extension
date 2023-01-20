@@ -1,4 +1,3 @@
-
 # Improve 209
 ***changes the UX of the CSC209 winter 2023 website***
 

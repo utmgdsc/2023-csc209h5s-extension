@@ -9,3 +9,13 @@ body {
 .special-text {
     color: red;
 }
+
+a.rupert {
+    border-radius: 0.5rem;
+    border: 1px solid #aaf;
+    color: #aaf;
+    display: inline-block;
+    font-size: large;
+    margin: 0 1rem 0.5rem 0;
+    padding: 0.25rem 0.75rem;
+}
