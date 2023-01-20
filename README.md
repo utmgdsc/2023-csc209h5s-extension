@@ -10,7 +10,7 @@
 
 ## Features
 * dark mode
-* [experimental] python file syntax highlighting
+* syntax highlighting based on highlight.js
 
 ### Links
 * external links now open in a new tab
