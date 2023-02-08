@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Improve 209",
     "description": "Some changes to the csc209 (2023 winter) website coordinated by Professor Rosenbloom",
-    "version": "0.12.0",
+    "version": "0.12.2",
     "icons": {
         "16": "logo/logo-16.png",
         "48": "logo/logo-48.png",
@@ -17,11 +17,17 @@
         "scripting"
     ],
     "host_permissions": [
-        "*://*/*"
+        "*://mcs.utm.utoronto.ca/~209/23s/*"
     ],
     "content_scripts": [{
-        "matches": ["https://mcs.utm.utoronto.ca/~209/23s/*"],
+        "matches": ["*://mcs.utm.utoronto.ca/~209/23s/*"],
         "css": ["foreground.css"],
         "js": ["foreground.js"]
-    }]
+    }],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "ihiagfbmgngcigolcmbgaiaememfamgf@logonoff.co",
+            "strict_min_version": "109.0"
+        }
+    }
 }

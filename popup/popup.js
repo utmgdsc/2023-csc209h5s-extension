@@ -10,7 +10,7 @@ async function getLectures(lectureNumber) {
     e.setAttribute('target', '_blank');
     e.setAttribute('class', 'rupert');
     e.href = getLectureLink(lectureNumber);
-    e.innerHTML = lectureNumber;
+    e.textContent = lectureNumber;
     e.style.visibility = "hidden";
 
     // base case for recursion (12 lectures in total)
@@ -36,4 +36,16 @@ async function UrlExists(url) {
     });
 }
 
-getLectures(1);
+function addLectures(lectureNumber) {
+    for (let i = 1; i < lectureNumber; i++) {
+        let e = document.createElement('a');
+        e.setAttribute('target', '_blank');
+        e.setAttribute('class', 'rupert');
+        e.href = getLectureLink(i);
+        e.textContent = i;
+        document.getElementById('lectures').appendChild(e);
+    }
+}
+
+addLectures(5);
+getLectures(5);

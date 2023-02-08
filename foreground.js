@@ -24,6 +24,9 @@ if (document.location.href.split("/").pop().split(".").pop() === "shtml") {
         }
     });
 
+    // add a link to the syllabus
+    document.querySelector("nav .links").innerHTML += "<li><a href=\"http://mcsmarks.utm.utoronto.ca/\" target='_blank'>Markus</a></li>";
+
     /*
      * Links
      */
