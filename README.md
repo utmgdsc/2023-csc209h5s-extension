@@ -1,5 +1,8 @@
 # Improve 209
-***changes the UX of the CSC209 winter 2023 website***
+***changes the UX of the CSC209 winter 2023 website***  
+
+[![Add to Chrome](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/webstore/detail/improve-209/ihiagfbmgngcigolcmbgaiaememfamgf) [![Add to Firefox](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/addon/improve-209/
+)
 
 ## Installation
 - **Open [the extensions page](chrome://extensions)** in your browser: `chrome://extensions`. This link works on any chromium-based browser.
