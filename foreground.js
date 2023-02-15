@@ -24,8 +24,14 @@ if (document.location.href.split("/").pop().split(".").pop() === "shtml") {
         }
     });
 
-    // add a link to the syllabus
-    document.querySelector("nav .links").innerHTML += "<li><a href=\"http://mcsmarks.utm.utoronto.ca/\" target='_blank'>Markus</a></li>";
+    // add a link to the MarkUs
+    document.querySelector("nav .links").innerHTML += "<li><a href=\"http://mcsmarks.utm.utoronto.ca/\" target='_blank'>MarkUs</a></li>";
+
+    // add a link to 209WhichCommit
+    document.querySelector("nav .links").innerHTML += "<li><a href=\"https://cs.utm.utoronto.ca/~ta/209whichCommit/index.php\" target='_blank'>Commit ID Submission</a></li>";
+
+    // add a link to the MarkUs
+    document.querySelector("nav .links").innerHTML += "<li><a href=\"https://mcs.utm.utoronto.ca/~csc209ta/index.php\" target='_blank'>Assignment/Lab Marks</a></li>";
 
     /*
      * Links

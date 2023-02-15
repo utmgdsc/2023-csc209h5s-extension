@@ -5,10 +5,10 @@
 	--color-primary: #2980b9;
 	--color-secondary: #4CB9E2;
 	--color-tertiary: #2494B9;
-	--text-color: #ffffff;
-	--text-color-secondary: #e2e2e2;
-	--background-color: #222;
-	--background-color-secondary: #262626;
+	--text-color: black;
+	--text-color-secondary: #3b3b3b;
+	--background-color: #fff;
+	--background-color-secondary: #e9e9e9;
 }
 
 /* improve main nav usability per fitt's law */
@@ -64,6 +64,15 @@ td li {
 
 /* dark mode */
 @media (prefers-color-scheme: dark) {
+	:root {
+		--color-primary: #2980b9;
+		--color-secondary: #4CB9E2;
+		--color-tertiary: #2494B9;
+		--text-color: #ffffff;
+		--text-color-secondary: #e2e2e2;
+		--background-color: #222;
+		--background-color-secondary: #262626;
+	}
 
 	html,
 	body,
