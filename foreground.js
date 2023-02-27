@@ -7,6 +7,13 @@
  * and injected into the same or different pages.
  */
 
+const navbarLinks = [
+    ["MarkUs", "http://mcsmarks.utm.utoronto.ca/"],
+    ["Commit ID Submission", "https://cs.utm.utoronto.ca/~ta/209whichCommit/index.php"],
+    ["Assignment/Lab Marks", "https://mcs.utm.utoronto.ca/~csc209ta/index.php"],
+    ["St. George Quercus", "https://q.utoronto.ca/courses/300838"]
+];
+
 if (document.location.href.split("/").pop().split(".").pop() === "shtml") {
     /*
      * Nav bar improvements
@@ -24,14 +31,12 @@ if (document.location.href.split("/").pop().split(".").pop() === "shtml") {
         }
     });
 
-    // add a link to the MarkUs
-    document.querySelector("nav .links").innerHTML += "<li><a href=\"http://mcsmarks.utm.utoronto.ca/\" target='_blank'>MarkUs</a></li>";
-
-    // add a link to 209WhichCommit
-    document.querySelector("nav .links").innerHTML += "<li><a href=\"https://cs.utm.utoronto.ca/~ta/209whichCommit/index.php\" target='_blank'>Commit ID Submission</a></li>";
-
-    // add a link to the MarkUs
-    document.querySelector("nav .links").innerHTML += "<li><a href=\"https://mcs.utm.utoronto.ca/~csc209ta/index.php\" target='_blank'>Assignment/Lab Marks</a></li>";
+    // add links
+    for (let i = 0; i < navbarLinks.length; i++) {
+        let e = document.createElement("li");
+        e.innerHTML = `<a href="${navbarLinks[i][1]}" target="_blank">${navbarLinks[i][0]}</a>`;
+        document.querySelector("nav .links").appendChild(e);
+    }
 
     /*
      * Links

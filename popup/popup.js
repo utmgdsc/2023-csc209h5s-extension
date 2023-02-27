@@ -5,6 +5,11 @@ const getLectureLink = (lectureNumber) => {
     return RUPERT_URL + lectureNumber.toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }) + ".pdf";
 }
 
+/**
+ * Recursively check if the lecture exists and add it to the DOM if it does
+ * @param {number} lectureNumber the first lecture number to check
+ * @returns {Promise<void>} a promise that resolves when the recursion is done
+ */
 async function getLectures(lectureNumber) {
     let e = document.createElement('a');
     e.setAttribute('target', '_blank');
@@ -30,12 +35,22 @@ async function getLectures(lectureNumber) {
     });
 }
 
+/**
+ * Check if a url exists
+ * @param {*} url the url to check
+ * @returns {Promise<boolean>} a promise that resolves to true if the url exists
+ */
 async function UrlExists(url) {
     return fetch(BYPASS_CORS + url).then((response) => {
         return response.status === 200;
     });
 }
 
+/*
+ * Add all the lecture links to the DOM
+ * @param {number} lectureNumber current week number
+ * @returns {Promise<void>} a promise that resolves when the recursion is done
+ */
 function addLectures(lectureNumber) {
     for (let i = 1; i < lectureNumber; i++) {
         let e = document.createElement('a');
@@ -45,7 +60,9 @@ function addLectures(lectureNumber) {
         e.textContent = i;
         document.getElementById('lectures').appendChild(e);
     }
+
+    getLectures(lectureNumber);
 }
 
-addLectures(5);
-getLectures(5);
+// get the week number relative to the start of the course (jan 9th 2022)
+addLectures(Math.min(Math.floor((Date.now() - new Date(2023, 0, 9))/ 604800000), 12) - 1);
