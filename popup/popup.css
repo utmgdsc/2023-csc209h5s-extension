@@ -1,7 +1,7 @@
 body {
     background-color: #222;
     color: #eee;
-
+    font-family: 'Source Sans Pro', Verdana, Geneva, Lucida, Helvetica, Arial, sans-serif;
     width: 16rem;
     height: 4rem;
 }
@@ -18,6 +18,12 @@ a.rupert {
     font-size: large;
     margin: 0 1rem 0.5rem 0;
     padding: 0.25rem 0.75rem;
+}
+
+#markdown-source {
+    color: #4cb9e2;
+    margin: -0.5rem 0 1rem 0;
+    display: block;
 }
 
 h1, h2 {

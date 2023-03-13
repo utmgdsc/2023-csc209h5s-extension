@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Improve 209",
     "description": "Some changes to the csc209 (2023 winter) website coordinated by Professor Rosenbloom",
-    "version": "0.12.4",
+    "version": "0.12.5",
     "icons": {
         "16": "logo/logo-16.png",
         "48": "logo/logo-48.png",
